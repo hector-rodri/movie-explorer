@@ -18,7 +18,14 @@ async function searchMovie() {
         }
 
         var li = document.createElement('li');
-        li.textContent = `${data.Title} (${data.Year})`;
+        li.innerHTML = `
+            <img src="${data.Poster !== "N/A" ? data.Poster : 'https://via.placeholder.com/80x120?text=No+Image'}" alt="Poster">
+            <div>
+                <h3>${data.Title} (${data.Year})</h3>
+                <p>${data.Plot}</p>
+            </div>
+        `;
+
         resultsList.appendChild(li);
 
     } catch (error) {
