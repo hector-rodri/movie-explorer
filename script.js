@@ -26,6 +26,9 @@ async function searchMovie() {
             </div>
         `;
 
+        if (resultsList.querySelector('li')) {
+            return; 
+        }
         resultsList.appendChild(li);
 
     } catch (error) {
