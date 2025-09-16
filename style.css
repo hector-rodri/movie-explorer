@@ -42,7 +42,8 @@ section {
 }
 
 #searchInput {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   padding: 0.65rem 1rem;
   border-radius: 8px;
   border: 1px solid #3a506b;
@@ -87,6 +88,9 @@ button:hover {
 }
 
 #results li {
+  display: flex;           
+  gap: 1rem;                  
+  align-items: flex-start;
   background: #1b263b;
   color: #e0eafc;
   padding: 1rem;
@@ -100,4 +104,28 @@ button:hover {
 #results li:hover {
   border-color: #112d4e;
   background: #3a506b;
+}
+
+#results li img {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+#results li div {
+  flex: 1;
+}
+
+#results li h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #e0eafc;
+}
+
+#results li p {
+  font-size: 0.95rem;
+  color: #a9bcd0;
+  line-height: 1.4;
 }
